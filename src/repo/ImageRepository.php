@@ -1,5 +1,5 @@
 <?php
-
+require_once "../src/entity/Image.php";
 class ImageRepository {
     private $conn;
 

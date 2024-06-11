@@ -9,6 +9,7 @@
         .id
         *titre
         *maindoeuvre
+        *link
     .
     ? Image
         .id
@@ -58,13 +59,14 @@
         CREATE TABLE `Produit` (
             id INT PRIMARY KEY AUTO_INCREMENT,
             titre VARCHAR(255) NOT NULL,
-            maindoeuvre INT(2) NOT NULL
+            maindoeuvre INT(2) NOT NULL,
+            link VARCHAR(512) NOT NULL
         ) ENGINE=InnoDB;
 
     -- . Table Image
         CREATE TABLE `Image` (
             id INT PRIMARY KEY AUTO_INCREMENT,
-            img TEXT NOT NULL,
+            img LONGTEXT NOT NULL,
             text VARCHAR(64),
             emplacement INT(1) DEFAULT 0 NOT NULL,
             ref_produit INT

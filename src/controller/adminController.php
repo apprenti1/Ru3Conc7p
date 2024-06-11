@@ -72,8 +72,10 @@ if ( isset($_SESSION['login']) && $_SESSION['login'] == true ) {
     elseif (str_starts_with($route, 'admin/produits')) {
         require_once '../src/repo/ProduitRepository.php';
         require_once '../src/repo/FournitureRepository.php';
+        require_once '../src/repo/ImageRepository.php';
         $produitRepository = new ProduitRepository();
         $fournituresRepository = new FournitureRepository();
+        $imageRepository = new ImageRepository();
         $title = 'Produits /!\ Admin /!\ ';
         if ($route == 'admin/produits') {
             $entity = $produitRepository->getAll();
@@ -81,7 +83,10 @@ if ( isset($_SESSION['login']) && $_SESSION['login'] == true ) {
         }
         elseif ($route == 'admin/produits/new') {
             if (isset($_POST['return']) && $_POST['return'] == 'new') {
-                $produitRepository->create(new Produit(null, $_POST['titre'], $_POST['mo']));
+                $produitRepository->create(new Produit(null, $_POST['titre'], $_POST['mo'], $_POST['link']));
+                foreach ($_POST['images'] as $key => $value) {
+                    $imageRepository->create(new Image(null, $value, $_POST['images-emplacement'][$key], $produitRepository->getLast()->getId()));
+                }
                 header("Location: ".$baseurl."admin/produits");
             }
             else{
@@ -91,7 +96,7 @@ if ( isset($_SESSION['login']) && $_SESSION['login'] == true ) {
         }
         elseif ($route == 'admin/produits/edit') {
             if (isset($_POST['return']) && $_POST['return'] == 'edit') {
-                $produitRepository->update(new Produit($_POST['id'], $_POST['titre'], $_POST['mo']));
+                $produitRepository->update(new Produit($_POST['id'], $_POST['titre'], $_POST['mo'], $_POST['link']));
                 header("Location: ".$baseurl."admin/produits");
             }
             elseif (isset($_POST['edit'])) {
@@ -104,7 +109,7 @@ if ( isset($_SESSION['login']) && $_SESSION['login'] == true ) {
         }
         elseif ($route == 'admin/produits/del') {
             if (isset($_POST['del'])) {
-                $entity = $produitRepository->delete(new Produit($_POST['del'], null, null));
+                $entity = $produitRepository->delete(new Produit($_POST['del'], null, null, null));
                 header("Location: ".$baseurl."admin/produits");              }
             else {
                 header("Location: ./");
