@@ -8,6 +8,7 @@
         <input type="number" step="0.01" name="mo" placeholder="prix" value="<?= (isset($_POST['edit']))? $entity->getMaindoeuvre() : "" ?>">
         <p>%</p>
     </div>
+    <input type="text" name="link" placeholder="Lien" value="<?= (isset($_POST['link']))? $entity->getLink() : "" ?>">
     <br>
     <h3>Fournitures :</h3>
     <div>
