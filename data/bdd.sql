@@ -1,5 +1,5 @@
 /*
-----------Ru3conc7p----------
+----------Ru3Conc7p----------
     ? User
         .id
         *email
@@ -33,15 +33,15 @@
     ? LinkProduitDevis
         *ref_produit
         *ref_devis
-----------Ru3conc7p---------->
+----------Ru3Conc7p---------->
 */--
 
 -- * BDD setup
     -- . Création de la base de données
-        CREATE DATABASE IF NOT EXISTS Ru3conc7p;
+        CREATE DATABASE IF NOT EXISTS Ru3Conc7p;
     
-    -- . Utilisation de la base de données Ru3conc7p
-        USE Ru3conc7p;
+    -- . Utilisation de la base de données Ru3Conc7p
+        USE Ru3Conc7p;
 
     -- . Définir le moteur de stockage InnoDB par défaut
         SET default_storage_engine = InnoDB;
