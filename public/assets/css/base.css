@@ -1,6 +1,35 @@
 :root {
   --primary: #ff0808;
 }
+
+.branding-container {
+  position: relative;
+  display: inline-block !important;
+}
+.branding, .branding-right, .branding-top, .branding-left {
+  height: 40px;
+  display: block;
+  position: absolute;
+} 
+.branding {
+  bottom: 10px;
+  right: 10px;
+}
+.branding-right {
+  top: 10px;
+  right: 10px;
+}
+.branding-top {
+  top: 10px;
+  left: 10px;
+}
+.branding-left {
+  bottom: 10px;
+  left: 10px;
+}
+
+
+
 .bg-primary {
   background-color: var(--primary) !important;
 }

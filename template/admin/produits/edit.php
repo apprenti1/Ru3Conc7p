@@ -1,5 +1,6 @@
 <div class="container min-h-100 bg-transparent text-center d-flex flex-column justify-content-center align-items-center">
 <link rel="stylesheet" href="<?= $baseurl ?>assets/css/admin-produits/new.css">
+<p id="baseurl" class="d-none"><?= $baseurl ?></p>
 <form action="" method="post" class="d-flex flex-column align-items-center w-100 p-3">
     <input type="hidden" name="id" value="<?= (isset($_POST['edit']))? $entity->getId() : "" ?>">
     <input type="text" name="titre" placeholder="Description" value="<?= (isset($_POST['edit']))? $entity->getTitre() : "" ?>">

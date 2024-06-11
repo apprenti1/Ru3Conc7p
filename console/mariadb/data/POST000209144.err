@@ -265,3 +265,11 @@ Version: '11.4.2-MariaDB'  socket: ''  port: 3306  mariadb.org binary distributi
 2024-06-04 20:57:32 0 [Note] mariadbd.exe: Event Scheduler: Loaded 0 events
 2024-06-04 20:57:32 0 [Note] console\mariadb\bin\mariadbd.exe: ready for connections.
 Version: '11.4.2-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2024-06-06 12:22:34 0 [Note] Starting MariaDB 11.4.2-MariaDB source revision 3fca5ed772fb75e3e57c507edef2985f8eba5b12 as process 24264
+2024-06-06 12:22:35 0 [ERROR] InnoDB: The data file './ibdata1' must be writable
+2024-06-06 12:22:35 0 [ERROR] InnoDB: The data file './ibdata1' must be writable
+2024-06-06 12:22:35 0 [ERROR] Plugin 'InnoDB' registration as a STORAGE ENGINE failed.
+2024-06-06 12:22:35 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-06-06 12:22:35 0 [Note] mariadbd.exe: SSPI: using principal name 'PEAB05231@COMMUN.AD.SNCF.FR', mech 'Negotiate'
+2024-06-06 12:22:35 0 [ERROR] Unknown/unsupported storage engine: InnoDB
+2024-06-06 12:22:35 0 [ERROR] Aborting

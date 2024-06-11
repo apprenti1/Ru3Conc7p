@@ -68,7 +68,11 @@ function addImage() {
     "<tr class=\"border-bottom border-black\" id=\"id"+idImage+"\">"+
     "        <input type=\"hidden\" name=\"images-emplacement[]\" value=\""+imagesEmplacement.value+"\">"+
     "        <input type=\"hidden\" name=\"images[]\" value=\""+document.getElementById('preview').children[0].src+"\">"+
-    "        <td class=\"text-primary d-flex align-items-center\"><img src=\""+document.getElementById('preview').children[0].src+"\" alt=\"preview\" height=\"200\" width=\"200\"></td>"+
+    "        <td class=\"text-primary d-flex justify-content-center\">"+
+    "           <div class=\"branding-container m-2\">"+
+    "               <img src=\""+document.getElementById('preview').children[0].src+"\" alt=\"preview\" height=\"200\" width=\"200\">"+
+    "               <img src=\""+document.getElementById('baseurl').innerHTML+"assets/img/icon.svg\" class=\""+((imagesEmplacement.value == 0)?"branding" : ((imagesEmplacement.value == 1)?"branding-right" : ((imagesEmplacement.value == 2)?"brending-top" : "branding-left")))+"\">"+
+    "        </td>"+
     "        <td class=\"text-primary\">"+
     "            <button type=\"button\" onclick=\"delImage("+idImage+")\">del</button>"+
     "        </td>"+
