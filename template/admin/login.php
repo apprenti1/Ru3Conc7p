@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="<?= $baseurl ?>assets/css/login.css">
 <div class="container d-flex justify-content-center align-items-center h-100">
-        <form action="<?= $baseurl ?>/admin" method="POST">
+        <form action="<?= $baseurl ?>admin" method="POST">
             <?php
             if (isset($error)){
             ?>

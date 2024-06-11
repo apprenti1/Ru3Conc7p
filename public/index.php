@@ -8,8 +8,8 @@ Bdd::generateKey();
 function load_route($route) {
     // Chemin du fichier de la route
     $routeFile = __DIR__ . '/../src/route/' . $route . '.php';
-    $baseurl = '../';
-    
+    //$baseurl = '../';
+    //var_dump($route);
     
     $baseurl .= str_repeat('../', substr_count($route, '/'));
     if (file_exists($routeFile)) {
