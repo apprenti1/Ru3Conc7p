@@ -1,31 +1,27 @@
 .navbar {
-    background-color: #000;
     position: fixed;
     width: 100%;
-}
-.navbar .deco {
-    border-top: 23px solid #fff;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    height: 0;
-    width: calc(200px );
-    position: absolute;
+    z-index: 1000;
     top: 0;
-    right: 5%;
+    left: 0;
+    background-color: #000;
 }
 .content div{
-    height: 100px !important;
-}
-.navbar .brand {
-
+    height: 90px !important;
 }
 
 .container {
     padding-top: 116px;
 }
 
-@media (max-width: 575px) {
-    .container {
-        padding-top: 232px;
+
+@media (max-width: 640px) {
+    .navbar {
+        position: relative;
+        width: 100%;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        background-color: #000;
     }
 }

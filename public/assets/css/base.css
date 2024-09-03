@@ -1,7 +1,14 @@
 :root {
   --primary: #ff0808;
 }
-
+* {
+  outline: none;
+  color: #fff;
+}
+div{
+  z-index: 2;
+  color: #fff;
+}
 .branding-container {
   position: relative;
   display: inline-block !important;
@@ -46,48 +53,55 @@ p {
 }
 
 .inverted {
-    filter: invert(1);
+  filter: invert(1);
+}
+.rounded-50px{
+  border-radius: 50px;
+}
+  /* arrow scrollto top animation */
+  .arrow {
+    width: 1.8rem;
+    height: 1.25rem;
+    display: inline-block;
+    position: relative;
   }
+  .arrow span {
+    top: 0.5rem;
+    position: absolute;
+    width: 1.2rem;
+    height: 0.4rem;
+    background-color: #efefef;
+    display: inline-block;
+    transition: 0.5s all 0s;
+    border-radius: 50px;
+  }
+  .arrow span:first-of-type {
+    left: 0;
+    transform: rotate(-45deg);
+  }
+  .arrow span:last-of-type {
+    right: 0;
+    transform: rotate(45deg);
+  }
+  .arrow:hover span {
+    transform: rotate(0deg);
+    width: 1rem;
+  }
+/* END arrow scrollto top animation */
+/*
+ <uniquifier>: Use a unique and descriptive class name
+ <weight>: Use a value from 400 to 900
+*/
 
-/* underline animation */
-.underlined {
-  position: relative;
-  color: #fff;
-  display: inline-block;
+.orbitron {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-size: 4rem;
+  color: var(--primary);
+  font-style: normal;
 }
-.darkunderlined.underlined::before {
-  background-color: #2F2C4F;
+input:focus-visible {
+  border: 0 !important;
 }
-.containerUnderlined:hover{text-decoration: none !important;}
-.containerUnderlined:hover .underlined::before, .containerUnderlined:focus .underlined::before {transform: scaleX(1);}
-.containerUnderlined:hover .underlined::after, .containerUnderlined:focus .underlined::after {filter: opacity(1);}
-.everunderlined .underlined::before {transform: scaleX(1);}
-.everunderlined .underlined::after {filter: opacity(1);}
 
-.underlined::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #fff;
-  transition: transform 0.3s ease;
-  transform: scaleX(0);
-}
-.underlined::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--primary);
-  mix-blend-mode: multiply;
-  pointer-events: none;
-  z-index: 1;
-  filter: opacity(0);
-  transition: 0.4s all 0s;
-}
-/* END underline animation */
