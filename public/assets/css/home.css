@@ -33,7 +33,7 @@ p {
     height: 300px;
     width: 200px;
     margin: 75px;
-    border-radius: 30px;
+    border-radius: 15px;
 
     backdrop-filter: blur(2px);
     border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;

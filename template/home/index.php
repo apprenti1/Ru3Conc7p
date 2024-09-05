@@ -31,7 +31,7 @@ for ($i=0; $i < 10; $i++) {
 ?>
 
 <div class="product-thunmbail overflow-hidden d-flex align-items-center flex-column">
-    <img src="assets/img/collier.png" alt="" class="w-100">
+    <img src="assets/img/collier.png" alt="" class="w-100 p-3">
     <h3 class="mx-1 mt-2" style="font-size: 1.2rem; color: #fff;">
         Collier en latex
         <p class="mx-1 mt-2" style="font-size: 1rem;">personalisé</p>
