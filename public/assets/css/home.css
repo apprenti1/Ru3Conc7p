@@ -71,4 +71,19 @@ p {
     #accueil {
         margin-top: 10px !important;
     }
+    .orbitron {
+        font-size: 3rem;
+    }
+    .product-thunmbail {
+        height: 240px;
+        width: 140px;
+        margin: 10px;
+    }
+    h3 {
+        font-size: 1.1rem !important;
+    }
+    .background {
+        top: 10%;
+        left: 50%;
+    }
 }
